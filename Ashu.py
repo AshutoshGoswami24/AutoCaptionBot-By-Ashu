@@ -3,7 +3,7 @@ import asyncio
 from config import *
 # Don't Remove Credit @AshutoshGoswami24
 Ashu = pyrogram.Client(
-    name="Ashu", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+    name="Ashu", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 # Don't Remove Credit @AshutoshGoswami24
 start_message = """
