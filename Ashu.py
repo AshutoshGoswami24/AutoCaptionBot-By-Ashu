@@ -8,21 +8,25 @@ import asyncio
 
 # Don't Remove Credit @AshutoshGoswami24
 try:
-    app_id = int(os.environ.get("app_id", ""))
+    APP_ID = int(os.environ.get("APP_ID", ""))
 except Exception as app_id:
     print(f"⚠️ App ID Invalid {app_id}")
+
 try:
-    api_hash = os.environ.get("api_hash", "")
+    API_HASH = os.environ.get("API_HASH", "").upper()
 except Exception as api_id:
     print(f"⚠️ Api Hash Invalid {api_hash}")
+
 try:
-    bot_token = os.environ.get("bot_token", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 except Exception as bot_token:
     print(f"⚠️ Bot Token Invalid {bot_token}")
+
 try:
-    custom_caption = os.environ.get("custom_caption", "`{file_name}`")
+    CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "")
 except Exception as custom_caption:
     print(f"⚠️ Custom Caption Invalid {custom_caption}")
+
 
 # Don't Remove Credit @AshutoshGoswami24
 Ashu = pyrogram.Client(
