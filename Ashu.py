@@ -1,7 +1,6 @@
 import pyrogram
 import asyncio
-from config import APP_ID, API_HASH, BOT_TOKEN, CUSTOM_CAPTION
-
+from config import *
 # Don't Remove Credit @AshutoshGoswami24
 Ashu = pyrogram.Client(
     name="Ashu", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
