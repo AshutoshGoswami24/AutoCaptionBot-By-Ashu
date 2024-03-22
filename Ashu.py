@@ -4,17 +4,17 @@
 # Don't Remove Credit @AshutoshGoswami24
 import pyrogram, os, asyncio
 # Don't Remove Credit @AshutoshGoswami24
-try: app_id = int(os.environ.get("app_id", ""))
+try: app_id = int(os.environ.get("app_id", "20389440"))
 except Exception as app_id: print(f"⚠️ App ID Invalid {app_id}")
-try: api_hash = os.environ.get("api_hash", "")
+try: api_hash = os.environ.get("api_hash", "a1a06a18eb9153e9dbd447cfd5da2457")
 except Exception as api_id: print(f"⚠️ Api Hash Invalid {api_hash}")
-try: bot_token = os.environ.get("bot_token", "")
+try: bot_token = os.environ.get("bot_token", "6564513574:AAH3Y97iqQjSlV5vKKZdGDUohlhpA-LeSbw")
 except Exception as bot_token: print(f"⚠️ Bot Token Invalid {bot_token}")
 try: custom_caption = os.environ.get("custom_caption", "`{file_name}`")
 except Exception as custom_caption: print(f"⚠️ Custom Caption Invalid {custom_caption}")
 # Don't Remove Credit @AshutoshGoswami24
-AutoCaptionBotV1 = pyrogram.Client(
-   name="AutoCaptionBotV1", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
+Ashu = pyrogram.Client(
+   name="Ashu", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
 # Don't Remove Credit @AshutoshGoswami24
 start_message = """
 <b>👋Hello {}</b>
@@ -93,8 +93,6 @@ def about_buttons(bot, update):
 print("Bot Working ")
 print("Bot Created By https://t.me/PandaWep")
 # Don't Remove Credit @AshutoshGoswami24
-AutoCaptionBotV1.run()
+Ashu.run()
 # Don't Remove Credit @AshutoshGoswami24
 # Don't Remove Credit @AshutoshGoswami24
-
-
