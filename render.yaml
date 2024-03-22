@@ -1,16 +1,4 @@
-name: "Ashu"
-description: "AutoCaptionBot-By-Ashu"
-logo: "https://graph.org/file/b3125068739885e7109db.jpg"
-keywords:
-  - "Private"
-  - "Auto"
-  - "Caption"
-  - "Bot"
-website: "https://youtube.com/@PandaWep"
-repository: "https://github.com/AshutoshGoswami24/AutoCaptionBot-By-Ashu"
-success_url: "https://youtube.com/@PandaWep"
-env:
-  app_id:
+app_id:
     description: "Your APP ID From my.telegram.org"
     value: ""
   api_hash:
@@ -22,7 +10,3 @@ env:
   custom_caption:
     description: "Caption Text.  use {file_name} to get original file name"
     required: false
-formation:
-  worker:
-    quantity: 1
-    size: "eco"
