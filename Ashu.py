@@ -30,20 +30,20 @@ about_message = """
 <b>• Updates : <a href=https://t.me/PandaWep>Click Here</a></b>
 <b>• Source Code : <a href=https://github.com/AshutoshGoswami24/AutoCaptionBot-By-Ashu>Click Here</a></b>"""
 # Don't Remove Credit @AshutoshGoswami24
-@AutoCaptionBotByAshu.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
+@Ashu.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
   update.reply(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 # Don't Remove Credit @AshutoshGoswami24
-@AutoCaptionBotByAshu.on_callback_query(pyrogram.filters.regex("start"))
+@Ashu.on_callback_query(pyrogram.filters.regex("start"))
 def strat_callback(bot, update):
   update.message.edit(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 # Don't Remove Credit @AshutoshGoswami24
-@AutoCaptionBotByAshu.on_callback_query(pyrogram.filters.regex("about"))
+@Ashu.on_callback_query(pyrogram.filters.regex("about"))
 def about_callback(bot, update): 
   bot = bot.get_me()
   update.message.edit(about_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=about_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 # Don't Remove Credit @AshutoshGoswami24
-@AutoCaptionBotByAshu.on_message(pyrogram.filters.channel)
+@Ashu.on_message(pyrogram.filters.channel)
 def edit_caption(bot, update: pyrogram.types.Message):
   motech, _ = get_file_details(update)
   try:
