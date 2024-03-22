@@ -1,7 +1,8 @@
 import os
 
 # Set your environment variables here
-os.environ["APP_ID"] = ""
-os.environ["API_HASH"] = ""
-os.environ["BOT_TOKEN"] = ""
+api_id = int(environ.get("API_ID", ""))
+api_hash = environ.get("API_HASH", "")
+bot_token = environ.get("BOT_TOKEN", "")
 os.environ["CUSTOM_CAPTION"] = ""
+custom_caption = environ.get("CUSTOM_CAPTION", "")
