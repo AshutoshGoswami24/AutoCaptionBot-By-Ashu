@@ -1,0 +1,43 @@
+{
+    "name": "VJ-AutoCaption-Bot",
+    "description": "Auto Caption BoT V1 @KingVJ01",
+    "logo": "https://graph.org/file/b3125068739885e7109db.jpg",
+    "keywords": [
+        "Private",
+        "Auto",
+        "Caption",
+        "Bot"
+    ],
+    "website": "https://youtube.com/@PandaWep",
+    "repository": "https://github.com/AshutoshGoswami24/AutoCaptionBot-By-Ashu",
+    "success_url": "https://youtube.com/@PandaWep",
+    "env": {
+        "app_id": {
+            "description": "Your APP ID From my.telegram.org",
+            "value": ""
+        },
+        "api_hash": {
+            "description": "Your API Hash From my.telegram.org",
+            "value": ""
+        },
+        "bot_token": {
+            "description": "Your Bot Token From @BotFather",
+            "value": ""        
+        },
+        "custom_caption": {
+            "description": "Caption Text.  use {file_name} to get original file name",
+            "required": false       
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
