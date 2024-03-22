@@ -1,36 +1,10 @@
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
 import pyrogram
-import os
 import asyncio
-
-# Don't Remove Credit @AshutoshGoswami24
-try:
-    APP_ID = int(os.environ.get("APP_ID", ""))
-except Exception as app_id:
-    print(f"⚠️ App ID Invalid {app_id}")
-
-try:
-    API_HASH = os.environ.get("API_HASH", "").upper()
-except Exception as api_id:
-    print(f"⚠️ Api Hash Invalid {api_hash}")
-
-try:
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-except Exception as bot_token:
-    print(f"⚠️ Bot Token Invalid {bot_token}")
-
-try:
-    CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "")
-except Exception as custom_caption:
-    print(f"⚠️ Custom Caption Invalid {custom_caption}")
-
+from config import APP_ID, API_HASH, BOT_TOKEN, CUSTOM_CAPTION
 
 # Don't Remove Credit @AshutoshGoswami24
 Ashu = pyrogram.Client(
-    name="Ashu", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
+    name="Ashu", api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 # Don't Remove Credit @AshutoshGoswami24
 start_message = """
@@ -48,19 +22,16 @@ about_message = """
 <b>• Updates : <a href=https://t.me/PandaWep>Click Here</a></b>
 <b>• Source Code : <a href=https://github.com/AshutoshGoswami24/AutoCaptionBot-By-Ashu>Click Here</a></b>"""
 
-# Don't Remove Credit @AshutoshGoswami24
 @Ashu.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
     update.reply(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update),
                   parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-# Don't Remove Credit @AshutoshGoswami24
 @Ashu.on_callback_query(pyrogram.filters.regex("start"))
 def strat_callback(bot, update):
     update.message.edit(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update.message),
                         parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-# Don't Remove Credit @AshutoshGoswami24
 @Ashu.on_callback_query(pyrogram.filters.regex("about"))
 def about_callback(bot, update):
     bot = bot.get_me()
@@ -68,7 +39,6 @@ def about_callback(bot, update):
                         reply_markup=about_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML,
                         disable_web_page_preview=True)
 
-# Don't Remove Credit @AshutoshGoswami24
 @Ashu.on_message(pyrogram.filters.channel)
 def edit_caption(bot, update: pyrogram.types.Message):
     motech, file_name = get_file_details(update)
@@ -81,7 +51,6 @@ def edit_caption(bot, update: pyrogram.types.Message):
     except pyrogram.errors.MessageNotModified:
         pass
 
-# Don't Remove Credit @AshutoshGoswami24
 def get_file_details(update: pyrogram.types.Message):
     if update.media:
         for message_type in (
@@ -107,7 +76,6 @@ def get_file_details(update: pyrogram.types.Message):
                     file_name = f"{message_type}.mp4"  # Default name for other media types
                 return obj, file_name
 
-# Don't Remove Credit @AshutoshGoswami24
 def start_buttons(bot, update):
     bot = bot.get_me()
     buttons = [[
@@ -119,17 +87,13 @@ def start_buttons(bot, update):
     ]]
     return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit @AshutoshGoswami24
 def about_buttons(bot, update):
     buttons = [[
         pyrogram.types.InlineKeyboardButton("🏠 Back To Home 🏠", callback_data="start")
     ]]
     return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-# Don't Remove Credit @AshutoshGoswami24
 print("Bot Working ")
 print("Bot Created By https://t.me/PandaWep")
-# Don't Remove Credit @AshutoshGoswami24
+
 Ashu.run()
-# Don't Remove Credit @AshutoshGoswami24
-# Don't Remove Credit @AshutoshGoswami24
