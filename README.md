@@ -36,10 +36,10 @@ Use these settings when adding a monitor:</b>
 
 ### Simple Variables 😉
 
-* `app_id` : Get this value from [telegram.org](https://my.telegram.org/apps).
-* `api_hash` : Get this value from [telegram.org](https://my.telegram.org/apps) .
-* `bot_token` : Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token .
-* `custom_caption` : your caption. add {file_name} to get file original name.
+* `APP_ID` : Get this value from [telegram.org](https://my.telegram.org/apps).
+* `API_HASH` : Get this value from [telegram.org](https://my.telegram.org/apps) .
+* `BOT_TOKEN` : Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token .
+* `CUSTOM_CAPTION` : your caption. add {file_name} to get file original name.
 
 ### Developer & Support
 
